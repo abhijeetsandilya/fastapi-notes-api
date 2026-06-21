@@ -12,4 +12,7 @@ class NoteUpdate(BaseModel):
 class NoteResponse(BaseModel):
     id: int
     notes_title: str
-    content: str
+    content: str | None
+
+    class Config:
+        from_attributes = True
